@@ -107,6 +107,7 @@ public class WorkoutOptions extends Activity {
     }
 
     private void buildCriteria(){
+        equipmentList = new EquipmentLIST();
 
         if (chkBarbell.isChecked()) {
             equipmentList.addItem("Barbell");

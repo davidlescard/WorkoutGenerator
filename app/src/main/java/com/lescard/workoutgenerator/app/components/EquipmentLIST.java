@@ -52,7 +52,7 @@ public class EquipmentLIST {
     private int findEmpty() {
         int next = -1;
         for (int i = 0; i < MAX_SIZE-1; i++) {
-            if (equipment[i].equals(null)) {
+            if (equipment[i] == null) {
                next = i;
                break;
             }
