@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.lescard.workoutgenerator.app.activity.WorkoutOptions"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:text="Number of Exercises:"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_num_exercises"
+        android:spinnerMode="dropdown"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_alignBottom="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Muscle Group:"
+        android:id="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/spinner_num_exercises"
+        android:paddingTop="20dp"
+        android:paddingBottom="30dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_muscle_group"
+        android:layout_below="@+id/spinner_num_exercises"
+        android:layout_toRightOf="@+id/textView2"
+        android:spinnerMode="dropdown"
+        android:layout_alignBottom="@+id/textView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate"
+        android:id="@+id/btn_generate"
+        android:layout_below="@+id/spinner_muscle_group"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Available Equipment:"
+        android:id="@+id/available_equipment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/btn_generate"
+        android:paddingBottom="10dp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/available_equipment"
+        android:fadeScrollbars="false">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barbell / Plated Weight"
+                android:id="@+id/chk_barbell"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adjustable Bench"
+                android:id="@+id/chk_adjustable_bench"
+                android:layout_below="@+id/chk_barbell"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dumbell"
+                android:id="@+id/chk_dumbell"
+                android:layout_below="@+id/chk_adjustable_bench"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kettlebell"
+                android:id="@+id/chk_kettlebell"
+                android:layout_below="@+id/chk_dumbell"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine Ball"
+                android:id="@+id/chk_medicine_ball"
+                android:layout_below="@+id/chk_kettlebell"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battle Rope"
+                android:id="@+id/chk_battle_rope"
+                android:layout_below="@+id/chk_medicine_ball"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pull Up Bar"
+                android:id="@+id/chk_pull_up_bar"
+                android:layout_below="@+id/chk_battle_rope"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Swiss Ball"
+                android:id="@+id/chk_swiss_ball"
+                android:layout_below="@+id/chk_pull_up_bar"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRX Suspension"
+                android:id="@+id/chk_trx_suspension"
+                android:layout_below="@+id/chk_swiss_ball"
+                android:checked="false" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
