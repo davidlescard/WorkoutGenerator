@@ -32,7 +32,7 @@ public class EquipmentLIST {
     public boolean isEmpty() {
         boolean result = true;
         for(int i = 0; i < MAX_SIZE; i++) {
-            if (!equipment[i].equals(null)) {
+            if (!(equipment[i] == null)) {
                 result = false;
             }
         }
