@@ -10,12 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 
 import com.lescard.workoutgenerator.app.R;
 import com.lescard.workoutgenerator.app.components.EquipmentLIST;
-
-import java.lang.reflect.Array;
 
 public class WorkoutOptions extends Activity {
 
@@ -40,13 +37,14 @@ public class WorkoutOptions extends Activity {
         setContentView(R.layout.activity_workout_options);
 
         setUpSpinners();
-        setUpCheckboxes();
+        setUpUIElements();
         setUpButton();
     }
 
     private void setUpSpinners() {
         spinnerNumExercises = (Spinner)findViewById(R.id.spinner_num_exercises);
-        ArrayAdapter<CharSequence> numExAdapter = ArrayAdapter.createFromResource(this, R.array.num_exercises_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> numExAdapter = ArrayAdapter.createFromResource(this,
+                R.array.num_exercises_array, android.R.layout.simple_spinner_item);
         numExAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerNumExercises.setAdapter(numExAdapter);
 
@@ -64,7 +62,8 @@ public class WorkoutOptions extends Activity {
         });
 
         spinnerMuscleGroup = (Spinner)findViewById(R.id.spinner_muscle_group);
-        ArrayAdapter<CharSequence> muscGrpAdapter = ArrayAdapter.createFromResource(this, R.array.muscle_group_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> muscGrpAdapter = ArrayAdapter.createFromResource(this,
+                R.array.muscle_group_array, android.R.layout.simple_spinner_item);
         numExAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMuscleGroup.setAdapter(muscGrpAdapter);
 
@@ -81,7 +80,7 @@ public class WorkoutOptions extends Activity {
         });
     }
 
-    private void setUpCheckboxes() {
+    private void setUpUIElements() {
         spinnerNumExercises = (Spinner)findViewById(R.id.spinner_num_exercises);
         spinnerMuscleGroup = (Spinner)findViewById(R.id.spinner_muscle_group);
         btnGenerate = (Button)findViewById(R.id.btn_generate);
