@@ -1,6 +1,7 @@
 package com.lescard.workoutgenerator.app.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 
 import com.lescard.workoutgenerator.app.R;
+import com.lescard.workoutgenerator.app.assist.StringHelper;
 import com.lescard.workoutgenerator.app.components.EquipmentLIST;
 
 public class WorkoutOptions extends Activity {
@@ -109,36 +111,38 @@ public class WorkoutOptions extends Activity {
         equipmentList = new EquipmentLIST();
 
         if (chkBarbell.isChecked()) {
-            equipmentList.addItem("Barbell");
+            equipmentList.addItem(StringHelper.EQUIP_BARBELL);
         }
         if (chkAdjustableBench.isChecked()) {
-            equipmentList.addItem("AdjustableBench");
+            equipmentList.addItem(StringHelper.EQUIP_BENCH);
         }
         if (chkDumbell.isChecked()) {
-            equipmentList.addItem("Dumbell");
+            equipmentList.addItem(StringHelper.EQUIP_DUMBELL);
         }
         if (chkKettlebell.isChecked()) {
-            equipmentList.addItem("Kettlebell");
+            equipmentList.addItem(StringHelper.EQUIP_KETTLEBELL);
         }
         if (chkMedicineBall.isChecked()) {
-            equipmentList.addItem("MedicineBall");
+            equipmentList.addItem(StringHelper.EQUIP_MEDICINEBALL);
         }
         if (chkBattleRope.isChecked()) {
-            equipmentList.addItem("BattleRope");
+            equipmentList.addItem(StringHelper.EQUIP_BATTLEROPE);
         }
         if (chkPullUpBar.isChecked()) {
-            equipmentList.addItem("PullUpBar");
+            equipmentList.addItem(StringHelper.EQUIP_PULLUPBAR);
         }
         if (chkSwissBall.isChecked()) {
-            equipmentList.addItem("SwissBall");
+            equipmentList.addItem(StringHelper.EQUIP_SWISSBALL);
         }
         if (chkTRXSuspension.isChecked()) {
-            equipmentList.addItem("TRXSuspension");
+            equipmentList.addItem(StringHelper.EQUIP_TRX);
         }
     }
 
     private void nextActivity(){
-        //TODO: proceed to next activity
+        Intent i = new Intent();
+        i.setClass(this, ExerciseList.class);
+        startActivity(i);
     }
 
     @Override
@@ -155,8 +159,8 @@ public class WorkoutOptions extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_exit) {
+            System.exit(0);
         }
         return super.onOptionsItemSelected(item);
     }

@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.lescard.workoutgenerator.app.activity.WorkoutOptions" >
     
-    <item android:id="@+id/action_settings"
+    <item android:id="@+id/action_exit"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        android:showAsAction="never" />
+        android:icon="@drawable/ic_action_cancel"
+        android:showAsAction="always|withText" />
 </menu>

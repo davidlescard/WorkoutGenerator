@@ -7,6 +7,7 @@ public class Exercise {
     private long ID;
     private String exerciseName;
     private String muscleGroupName;
+    private String equipmentName;
 
     public long getID() {
         return ID;
@@ -30,5 +31,13 @@ public class Exercise {
 
     public void setMuscleGroupName(String muscleName) {
         this.muscleGroupName = muscleName;
+    }
+
+    public String getEquipmentName() {
+        return equipmentName;
+    }
+
+    public void setEquipmentName(String equipName) {
+        this.equipmentName = equipName;
     }
 }
