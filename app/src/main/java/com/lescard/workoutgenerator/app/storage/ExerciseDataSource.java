@@ -33,25 +33,6 @@ public class ExerciseDataSource {
         dbHelper.close();
     }
 
-//    public Exercise createExercise(String exercise, String muscGrp) {
-//        ContentValues values = new ContentValues();
-//        values.put(ExerciseOpenHelper.EXERCISE_TABLE_COL_EXERCISE_NAME, exercise);
-//        values.put(ExerciseOpenHelper.EXERCISE_TABLE_COL_MUSC_GRP_NAME, muscGrp);
-//        long insertId = database.insert(ExerciseOpenHelper.EXERCISE_TABLE_NAME, null, values);
-////        String insertRecord = "INSERT INTO " + ExerciseOpenHelper.EXERCISE_TABLE_NAME + " ("
-////                + ExerciseOpenHelper.EXERCISE_TABLE_COL_EXERCISE_NAME + ", "
-////                + ExerciseOpenHelper.EXERCISE_TABLE_COL_MUSC_GRP_NAME + ") Values "
-////                + "('" + exercise + "', " + "'" + muscGrp + "');";
-////        database.execSQL(insertRecord);
-//        Cursor cursor = database.query(ExerciseOpenHelper.EXERCISE_TABLE_NAME, allColumns,
-//                ExerciseOpenHelper.EXERCISE_TABLE_COL_ID + " = " + insertId, null,
-//                null, null, null);
-//        cursor.moveToFirst();
-//        Exercise newExercise = cursorToExercise(cursor);
-//        cursor.close();
-//        return newExercise;
-//    }
-
     public List<Exercise> getAllExercises() {
         List<Exercise> exercises = new ArrayList<Exercise>();
 

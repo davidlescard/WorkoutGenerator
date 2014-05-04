@@ -88,7 +88,6 @@ public class ExerciseOpenHelper extends SQLiteOpenHelper {
             values.put(StringHelper.EXERCISE_TABLE_COL_EQUIP_NAME, allExercises[i][2]);
             db.insert(StringHelper.EXERCISE_TABLE_NAME, null, values);
         }
-//        db.insert(ExerciseOpenHelper.EXERCISE_TABLE_NAME, null, values);
     }
 
     @Override

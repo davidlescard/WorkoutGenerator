@@ -40,4 +40,9 @@ public class Exercise {
     public void setEquipmentName(String equipName) {
         this.equipmentName = equipName;
     }
+
+    @Override
+    public String toString() {
+        return exerciseName;
+    }
 }
