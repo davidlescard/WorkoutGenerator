@@ -1,11 +1,11 @@
 package com.lescard.workoutgenerator.app.storage;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.lescard.workoutgenerator.app.assist.StringHelper;
+import com.lescard.workoutgenerator.app.assist.VarHelper;
+import com.lescard.workoutgenerator.app.components.Exercise;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -18,10 +18,10 @@ public class ExerciseDataSource {
 
     // Database fields
     private SQLiteDatabase database;
-    private ExerciseOpenHelper dbHelper;
+    private ExerciseDBOpenHelper dbHelper;
 
     public ExerciseDataSource(Context context) {
-        dbHelper = new ExerciseOpenHelper(context);
+        dbHelper = new ExerciseDBOpenHelper(context);
     }
 
     public void open() throws SQLException {
@@ -36,8 +36,8 @@ public class ExerciseDataSource {
     public List<Exercise> getAllExercises() {
         List<Exercise> exercises = new ArrayList<Exercise>();
 
-        Cursor cursor = database.query(StringHelper.EXERCISE_TABLE_NAME,
-                StringHelper.allColumns, null, null, null, null, null);
+        Cursor cursor = database.query(VarHelper.EXERCISE_TABLE_NAME,
+                VarHelper.allColumns, null, null, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {

@@ -4,6 +4,6 @@
     <string name="app_name">Workout Generator</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Exit</string>
-    <string name="title_activity_exercise_list">ExerciseList</string>
+    <string name="title_activity_exercise_list">Exercise List</string>
 
 </resources>
