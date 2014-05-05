@@ -13,9 +13,9 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 
 import com.lescard.workoutgenerator.app.R;
-import com.lescard.workoutgenerator.app.assist.VarHelper;
-import com.lescard.workoutgenerator.app.components.EquipmentLIST;
-import com.lescard.workoutgenerator.app.components.RequestedConfig;
+import com.lescard.workoutgenerator.app.assist.Util;
+import com.lescard.workoutgenerator.app.components.EquipmentList;
+import com.lescard.workoutgenerator.app.components.ExerciseParams;
 
 public class WorkoutOptionsActivity extends Activity {
 
@@ -28,7 +28,7 @@ public class WorkoutOptionsActivity extends Activity {
 
     private int numExercises;
     private String muscleGroup;
-    private EquipmentLIST equipmentList;
+    private EquipmentList equipmentList;
 
     private int DEFAULT_NUM_EXERCISES = 1;
     private String DEFAULT_MUSCLE_GROUP = "Any";
@@ -109,41 +109,41 @@ public class WorkoutOptionsActivity extends Activity {
     }
 
     private void buildCriteria(){
-        equipmentList = new EquipmentLIST();
+        equipmentList = new EquipmentList();
 
         if (chkBarbell.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_BARBELL);
+            equipmentList.addItem(Util.EQUIP_BARBELL);
         }
         if (chkAdjustableBench.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_BENCH);
+            equipmentList.addItem(Util.EQUIP_BENCH);
         }
         if (chkDumbell.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_DUMBELL);
+            equipmentList.addItem(Util.EQUIP_DUMBELL);
         }
         if (chkKettlebell.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_KETTLEBELL);
+            equipmentList.addItem(Util.EQUIP_KETTLEBELL);
         }
         if (chkMedicineBall.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_MEDICINEBALL);
+            equipmentList.addItem(Util.EQUIP_MEDICINEBALL);
         }
         if (chkBattleRope.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_BATTLEROPE);
+            equipmentList.addItem(Util.EQUIP_BATTLEROPE);
         }
         if (chkPullUpBar.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_PULLUPBAR);
+            equipmentList.addItem(Util.EQUIP_PULLUPBAR);
         }
         if (chkSwissBall.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_SWISSBALL);
+            equipmentList.addItem(Util.EQUIP_SWISSBALL);
         }
         if (chkTRXSuspension.isChecked()) {
-            equipmentList.addItem(VarHelper.EQUIP_TRX);
+            equipmentList.addItem(Util.EQUIP_TRX);
         }
     }
 
     private void nextActivity(){
-        RequestedConfig.setEquipmentLIST(equipmentList);
-        RequestedConfig.setNumExercises(numExercises);
-        RequestedConfig.setMuscleGroup(muscleGroup);
+        ExerciseParams.setEquipmentList(equipmentList);
+        ExerciseParams.setNumExercises(numExercises);
+        ExerciseParams.setMuscleGroup(muscleGroup);
         Intent i = new Intent();
         i.setClass(this, ExerciseListActivity.class);
         startActivity(i);

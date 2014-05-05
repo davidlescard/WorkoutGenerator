@@ -1,16 +1,19 @@
 package com.lescard.workoutgenerator.app.components;
 
+import com.lescard.workoutgenerator.app.assist.Util;
+
 /**
  * Created by davidlescard on 4/17/14.
  */
-public class EquipmentLIST {
+public class EquipmentList {
 
-    private final int MAX_SIZE = 100;
-    private String equipment[] = new String[MAX_SIZE];
+    private int CURRENT_SIZE = 0;
+    private String equipment[] = new String[Util.EQUIP_LIST_COUNT];
 
     public void addItem(String s) {
         int next = findEmpty();
         equipment[next] = s;
+        CURRENT_SIZE++;
     }
 
     public void removeItem(String s) {
@@ -19,7 +22,12 @@ public class EquipmentLIST {
             // do nothing, item doesnt exist
         } else {
             equipment[locationItem] = null;
+            CURRENT_SIZE--;
         }
+    }
+
+    public String getEquipment(int pos) {
+        return equipment[pos];
     }
 
     public boolean isFull() {
@@ -31,7 +39,7 @@ public class EquipmentLIST {
 
     public boolean isEmpty() {
         boolean result = true;
-        for(int i = 0; i < MAX_SIZE; i++) {
+        for(int i = 0; i < Util.EQUIP_LIST_COUNT; i++) {
             if (!(equipment[i] == null)) {
                 result = false;
             }
@@ -39,9 +47,13 @@ public class EquipmentLIST {
         return result;
     }
 
+    public int getCurrentSize() {
+        return CURRENT_SIZE;
+    }
+
     public int search(String s) {
         int location = -1;
-        for (int i = 0; i < MAX_SIZE; i++) {
+        for (int i = 0; i < Util.EQUIP_LIST_COUNT; i++) {
             if (equipment[i].equals(s)) {
                 location = i;
             }
@@ -51,7 +63,7 @@ public class EquipmentLIST {
 
     private int findEmpty() {
         int next = -1;
-        for (int i = 0; i < MAX_SIZE-1; i++) {
+        for (int i = 0; i < Util.EQUIP_LIST_COUNT-1; i++) {
             if (equipment[i] == null) {
                next = i;
                break;

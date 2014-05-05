@@ -33,7 +33,7 @@ public class ExerciseListActivity extends ListActivity {
             e.printStackTrace();
         }
 
-        List<Exercise> exerciseList = exerciseDataSource.getAllExercises();
+        List<Exercise> exerciseList = exerciseDataSource.getCandidates();
 
         ArrayAdapter<Exercise> adapter = new ArrayAdapter<Exercise>(this,
                 android.R.layout.simple_list_item_1, exerciseList);
