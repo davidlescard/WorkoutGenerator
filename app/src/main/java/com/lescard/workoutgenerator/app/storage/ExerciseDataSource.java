@@ -60,7 +60,6 @@ public class ExerciseDataSource {
         List<Exercise> exercises = new ArrayList<Exercise>();
         buildWhereClause();
         buildWhereArgs();
-//        String[] s = {Util.EQUIP_BARBELL};
         try {
         Cursor cursor = database.query(Util.EXERCISE_TABLE_NAME,
                 Util.allColumns, whereClause, whereArgs, null, null, null);
@@ -89,6 +88,8 @@ public class ExerciseDataSource {
     private void buildWhereClause() {
         argCount = 0;
         whereClauseBuilder = new StringBuilder();
+        String defaultWhereClause = Util.EXERCISE_TABLE_COL_EQUIP_NAME +
+                " = '" + Util.EQUIP_NONE + "'";
         StringBuilder muscGrpClauseBuilder = new StringBuilder();
         StringBuilder equipListClauseBuilder = new StringBuilder();
         Boolean partA = false;
@@ -113,16 +114,23 @@ public class ExerciseDataSource {
 
         if(partA && partB) {
             whereClauseBuilder.append(muscGrpClauseBuilder);
-            whereClauseBuilder.append(" AND ");
+            whereClauseBuilder.append(" AND (");
             whereClauseBuilder.append(equipListClauseBuilder);
+            whereClauseBuilder.append(" OR ");
+            whereClauseBuilder.append(defaultWhereClause);
+            whereClauseBuilder.append(")");
             whereClause = whereClauseBuilder.toString();
         }
         else if(partA && !partB) {
             whereClauseBuilder.append(muscGrpClauseBuilder);
+            whereClauseBuilder.append(" AND ");
+            whereClauseBuilder.append(defaultWhereClause);
             whereClause = whereClauseBuilder.toString();
         }
         else if (!partA && partB) {
             whereClauseBuilder.append(equipListClauseBuilder);
+            whereClauseBuilder.append(" OR ");
+            whereClauseBuilder.append(defaultWhereClause);
             whereClause = whereClauseBuilder.toString();
         }
         else
