@@ -135,8 +135,8 @@ public class ExerciseDataSource {
         }
         else
         {
-            whereClauseBuilder = null;
-            whereClause = null;
+            whereClauseBuilder.append(defaultWhereClause);
+            whereClause = whereClauseBuilder.toString();
         }
     }
 
