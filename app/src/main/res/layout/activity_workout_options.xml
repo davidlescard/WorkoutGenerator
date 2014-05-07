@@ -23,7 +23,8 @@
         android:width="200dp"
         android:paddingTop="20dp"
         android:textIsSelectable="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"/>
 
     <Spinner
         android:layout_width="wrap_content"
@@ -32,7 +33,8 @@
         android:spinnerMode="dropdown"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textView"
-        android:layout_alignBottom="@+id/textView" />
+        android:layout_alignBottom="@+id/textView"
+        android:textColor="@android:color/holo_blue_dark"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +49,8 @@
         android:paddingBottom="30dp"
         android:width="180dp"
         android:layout_below="@+id/spinner_num_exercises"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"/>
 
     <Spinner
         android:layout_width="wrap_content"
@@ -57,7 +60,8 @@
         android:spinnerMode="dropdown"
         android:layout_alignParentTop="false"
         android:layout_below="@+id/spinner_num_exercises"
-        android:paddingTop="20dp" />
+        android:paddingTop="20dp"
+        android:textColor="@android:color/holo_blue_dark"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -65,7 +69,8 @@
         android:text="Generate"
         android:id="@+id/btn_generate"
         android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_dark" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -79,7 +84,8 @@
         android:paddingRight="20dp"
         android:layout_below="@+id/btn_generate"
         android:paddingBottom="10dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"/>
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -99,7 +105,8 @@
                 android:id="@+id/chk_barbell"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -109,7 +116,8 @@
                 android:layout_below="@+id/chk_barbell"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -119,7 +127,8 @@
                 android:layout_below="@+id/chk_adjustable_bench"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -127,7 +136,8 @@
                 android:text="Kettlebell"
                 android:id="@+id/chk_kettlebell"
                 android:layout_below="@+id/chk_dumbell"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -135,7 +145,8 @@
                 android:text="Medicine Ball"
                 android:id="@+id/chk_medicine_ball"
                 android:layout_below="@+id/chk_kettlebell"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -143,7 +154,8 @@
                 android:text="Battle Rope"
                 android:id="@+id/chk_battle_rope"
                 android:layout_below="@+id/chk_medicine_ball"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -151,7 +163,8 @@
                 android:text="Pull Up Bar"
                 android:id="@+id/chk_pull_up_bar"
                 android:layout_below="@+id/chk_battle_rope"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -159,7 +172,8 @@
                 android:text="Swiss Ball"
                 android:id="@+id/chk_swiss_ball"
                 android:layout_below="@+id/chk_pull_up_bar"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -167,7 +181,8 @@
                 android:text="TRX Suspension"
                 android:id="@+id/chk_trx_suspension"
                 android:layout_below="@+id/chk_swiss_ball"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="@android:color/holo_blue_dark"/>
 
         </RelativeLayout>
     </ScrollView>

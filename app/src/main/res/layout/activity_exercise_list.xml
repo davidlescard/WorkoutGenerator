@@ -18,13 +18,14 @@
         android:layout_alignParentStart="true"
         android:paddingBottom="20dp"
         android:paddingTop="10dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"/>
 
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@android:id/list"
         android:layout_below="@+id/textView"
-        android:background="#f0f0f0" />
+        android:background="#f0f0f0"/>
 
 </RelativeLayout>
