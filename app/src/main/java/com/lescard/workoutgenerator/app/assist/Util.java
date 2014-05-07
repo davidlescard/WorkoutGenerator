@@ -9,6 +9,21 @@ public class Util {
     public static int EQUIP_LIST_COUNT = 10;
     public static int MAX_NUM_EXERCISES = 88;
 
+    //Database Constants
+    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "ExerciseListActivity";
+    public static final String EXERCISE_TABLE_NAME = "exercises";
+    public static final String EXERCISE_TABLE_COL_ID = "_id";
+    public static final String EXERCISE_TABLE_COL_EXERCISE_NAME = "exerciseName";
+    public static final String EXERCISE_TABLE_COL_MUSC_GRP_NAME = "exerciseMscGrp";
+    public static final String EXERCISE_TABLE_COL_EQUIP_NAME = "equipmentName";
+    public static final String[] allColumns = {
+            EXERCISE_TABLE_COL_ID,
+            EXERCISE_TABLE_COL_EXERCISE_NAME,
+            EXERCISE_TABLE_COL_MUSC_GRP_NAME,
+            EXERCISE_TABLE_COL_EQUIP_NAME
+    };
+
     //Equipment
     public static String EQUIP_BARBELL = "Barbell";
     public static String EQUIP_BENCH = "AdjustableBench";
@@ -26,7 +41,7 @@ public class Util {
     public static String GRP_UPPER = "Upper";
     public static String GRP_LOWER = "Lower";
     public static String GRP_CORE = "Core";
-    
+
     //Exercises
     public static String EX_BICYCLECRUNCHES = "Bicycle crunches";
     public static String EX_REVERSECRUNCHES = "Reverse crunches";
@@ -116,23 +131,9 @@ public class Util {
     public static String EX_CATERPILLAR_PUSHUP = "Caterpillar Pushup";
     public static String EX_STANDING_ROW = "Standing row";
     public static String EX_SWISS_BALL_CRUNCH = "Swiss ball crunches";
-    
-    //Database Constants
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "ExerciseListActivity";
-    public static final String EXERCISE_TABLE_NAME = "exercises";
-    public static final String EXERCISE_TABLE_COL_ID = "_id";
-    public static final String EXERCISE_TABLE_COL_EXERCISE_NAME = "exerciseName";
-    public static final String EXERCISE_TABLE_COL_MUSC_GRP_NAME = "exerciseMscGrp";
-    public static final String EXERCISE_TABLE_COL_EQUIP_NAME = "equipmentName";
-    public static final String[] allColumns = {
-            EXERCISE_TABLE_COL_ID,
-            EXERCISE_TABLE_COL_EXERCISE_NAME,
-            EXERCISE_TABLE_COL_MUSC_GRP_NAME,
-            EXERCISE_TABLE_COL_EQUIP_NAME
-    };
 
     public static String[][] allExercises = new String[MAX_NUM_EXERCISES][3];
+
     public static void populateArray(){
         allExercises[0][0] = EX_BICYCLECRUNCHES;
         allExercises[0][1] = GRP_CORE;
@@ -397,10 +398,6 @@ public class Util {
         allExercises[86][2] = EQUIP_KETTLEBELL;
         allExercises[87][0] = EX_SWISS_BALL_CRUNCH;
         allExercises[87][1] = GRP_CORE;
-        allExercises[87][2] = EQUIP_NONE;
+        allExercises[87][2] = EQUIP_SWISSBALL;
     }
-
-
-
-
 }
