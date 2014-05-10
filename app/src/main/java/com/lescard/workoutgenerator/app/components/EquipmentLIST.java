@@ -4,6 +4,10 @@ import com.lescard.workoutgenerator.app.assist.Util;
 
 /**
  * Created by davidlescard on 4/17/14.
+ *
+ * This class is a custom List structure (as required by CPTN278)
+ * It is an array-based list implementation, which is used to store
+ * the equipment selected by the user.
  */
 public class EquipmentList {
 

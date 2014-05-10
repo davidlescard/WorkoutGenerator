@@ -3,7 +3,12 @@ package com.lescard.workoutgenerator.app.components;
 import com.lescard.workoutgenerator.app.assist.Util;
 
 /**
- * Created by davidlescard on 5/4/14.
+ * This is a class containing static members to be used to
+ * allow user-inputted exercise parameters to persist between
+ * screens ("activities").  Since no more than one instance of
+ * the class is ever needed, its attributes are called directly
+ * (ie. ExerciseParams.getEquipment), and the constructors
+ * are never used.
  */
 public class ExerciseParams {
     private static EquipmentList equipmentList;

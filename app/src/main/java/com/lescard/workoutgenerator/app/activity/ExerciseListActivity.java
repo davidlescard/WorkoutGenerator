@@ -18,6 +18,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ *  This class displays the list of exercises, but when it is created,
+ *  it establishes the connection to the internal SQLite database via
+ *  ExerciseDBOpenHelper and ExerciseDataSource.  A private method
+ *  exists, randomizeCandidates, which manipulates the list of
+ *  "candidate" exercises as provided by ExerciseDataSource.
+ */
+
 public class ExerciseListActivity extends ListActivity {
 
     private ExerciseDataSource exerciseDataSource;

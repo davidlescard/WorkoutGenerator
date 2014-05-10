@@ -14,7 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by davidlescard on 4/26/14.
+ * This class is what provides and instance of the SQLite database
+ * and contains strings to represent all queries used throughout
+ * the program, and ultimately provides a public method to gather
+ * and return the list of all candidate exercises based on the users
+ * inputted criteria.  It leverages several private methods to
+ * pivot on options selected by the user, to determine which would
+ * be included in the candidate list.
  */
 public class ExerciseDataSource {
 

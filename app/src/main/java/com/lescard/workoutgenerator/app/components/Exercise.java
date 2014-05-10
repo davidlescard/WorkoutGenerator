@@ -1,7 +1,10 @@
 package com.lescard.workoutgenerator.app.components;
 
 /**
- * Created by davidlescard on 4/26/14.
+ * This class is the "model" for the table in the SQLite
+ * database which will store the master list of exercises,
+ * along with their respective attributes (muscle group,
+ * equipment required, name, and ID).
  */
 public class Exercise {
     private long ID;

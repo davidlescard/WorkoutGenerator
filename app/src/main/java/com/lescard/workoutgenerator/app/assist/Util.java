@@ -1,7 +1,8 @@
 package com.lescard.workoutgenerator.app.assist;
 
 /**
- * Created by davidlescard on 5/1/14.
+ * This is a helper class to provide one location for all
+ * strings and other variables shared throughout the application.
  */
 public class Util {
 

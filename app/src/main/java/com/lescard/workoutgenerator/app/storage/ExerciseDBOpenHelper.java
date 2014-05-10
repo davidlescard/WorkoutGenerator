@@ -9,7 +9,9 @@ import android.util.Log;
 import com.lescard.workoutgenerator.app.assist.Util;
 
 /**
- * Created by davidlescard on 4/26/14.
+ * This is a necessary helper class to establish the connection
+ * to the SQLite database, and creates and populates the table
+ * of available exercises when called
  */
 public class ExerciseDBOpenHelper extends SQLiteOpenHelper {
     private static SQLiteDatabase database;

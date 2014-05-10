@@ -17,6 +17,15 @@ import com.lescard.workoutgenerator.app.assist.Util;
 import com.lescard.workoutgenerator.app.components.EquipmentList;
 import com.lescard.workoutgenerator.app.components.ExerciseParams;
 
+/**
+ *  This class is the Exercise Parameters screen which the user
+ *  is greeted with when opening the application. Options are received
+ *  from UI controls manipulated by the user, which when Generate
+ *  is selected, are set to global the static properties of the
+ *  ExerciseParams class.  User is then progressed to the ExerciseList
+ *  activity to display resulting list of exercises.
+ */
+
 public class WorkoutOptionsActivity extends Activity {
 
     private Spinner spinnerNumExercises;
